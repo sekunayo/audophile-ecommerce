@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { styles } from "./styles";
 import { ReactComponent as ArrowLeft } from "../../assets/icons/arrow.svg";
 
@@ -12,9 +12,9 @@ const CategoryProductCard = ({ title, image }: CategoryProductCardProps) => {
     <div className={styles.productCard}>
       <div className={styles.productCardText}>
         <h5 className={styles.productCardHeading}>{title}</h5>
-        <Link className={styles.productCardLink} to={`/${title}`}>
+        <NavLink className={styles.productCardLink} to={`/category/${title}`}>
           Shop <ArrowLeft />
-        </Link>
+        </NavLink>
       </div>
 
       <div className={styles.productCardImage}>

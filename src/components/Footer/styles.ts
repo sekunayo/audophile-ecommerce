@@ -55,6 +55,16 @@ const footerNavListItem = css({
   lineHeight: "25px",
   letterSpacing: "2px",
   textTransform: "uppercase",
+  transition: "color 0.5s ease-in-out",
+  cursor: "pointer",
+
+  "&.active": {
+    color: colors.primary01,
+  },
+
+  "&:hover": {
+    color: colors.primary01,
+  },
 });
 
 const footerNavList = css({

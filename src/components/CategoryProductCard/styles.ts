@@ -48,6 +48,11 @@ const productCardLink = css({
   lineHeight: "normal",
   letterSpacing: "1.286px",
   textTransform: "uppercase",
+  transition: "color 0.5s ease-in-out",
+
+  "&.active": {
+    color: colors.primary01,
+  },
 
   "&:hover": {
     color: colors.primary01,

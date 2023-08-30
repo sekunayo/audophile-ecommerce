@@ -4,15 +4,15 @@ export const navigation = [
     text: "home",
   },
   {
-    path: "/headphones",
+    path: "/category/headphones",
     text: "headphones",
   },
   {
-    path: "/speakers",
+    path: "/category/speakers",
     text: "speakers",
   },
   {
-    path: "/earphones",
+    path: "/category/earphones",
     text: "earphones",
   },
 ];

@@ -6,8 +6,27 @@ import Location from "../../components/Location";
 import CategoryProductCard from "../../components/CategoryProductCard";
 import Footer from "../../components/Footer";
 import { navigation } from "../../config";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const cart = useSelector((state: RootState) => state.cart);
+
+  const navigateToHeadphones = () => {
+    navigate("/headphones/xx99-mark-two-headphones");
+  };
+  const navigateToBigSpeakers = () => {
+    navigate("/speakers/zx9-speaker");
+  };
+  const navigateToSpeakers = () => {
+    navigate("/speakers/zx7-speaker");
+  };
+  const navigateToEarphones = () => {
+    navigate("/earphones/yx1-earphones");
+  };
+
   return (
     <div className={styles.home}>
       <div className={styles.homeHero}>
@@ -26,7 +45,12 @@ const Home = () => {
                 Experience natural, lifelike audio and exceptional build quality
                 made for the passionate music enthusiast.
               </p>
-              <Button variant="primary" type="button" label="see product" />
+              <Button
+                handleClick={navigateToHeadphones}
+                variant="primary"
+                type="button"
+                label="see product"
+              />
             </div>
 
             <div className={styles.homeHeroBoxImage}>
@@ -75,6 +99,7 @@ const Home = () => {
                 variant="primary"
                 customClassName={styles.homeBigSpeakerButton}
                 type="button"
+                handleClick={navigateToBigSpeakers}
                 label="see product"
               />
             </div>
@@ -82,7 +107,12 @@ const Home = () => {
           <div className={styles.homeSpeaker}>
             <div className={styles.homeSpeakerText}>
               <h4 className={styles.homeTextHeading}>ZX SPEAKER</h4>
-              <Button variant="secondary" type="button" label="see product" />
+              <Button
+                handleClick={navigateToSpeakers}
+                variant="secondary"
+                type="button"
+                label="see product"
+              />
             </div>
             <img
               src={"/images/home/desktop/image-speaker-zx7.jpg"}
@@ -99,7 +129,12 @@ const Home = () => {
             </div>
             <div className={styles.homeEarphonesText}>
               <h4 className={styles.homeTextHeading}>YX1 EARPHONES</h4>
-              <Button variant="secondary" type="button" label="see product" />
+              <Button
+                handleClick={navigateToEarphones}
+                variant="secondary"
+                type="button"
+                label="see product"
+              />
             </div>
           </div>
         </div>

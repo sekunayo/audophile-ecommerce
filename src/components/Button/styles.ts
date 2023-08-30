@@ -20,6 +20,7 @@ const button = (variant: ButtonVariantType) =>
     letterSpacing: "1px",
     fontSize: "13px",
     border: `${variant === "secondary" ? "1px solid #000" : "none"}`,
+    transition: "all .5s ease",
 
     "& svg": {
       fill: "#fff",
@@ -30,6 +31,13 @@ const button = (variant: ButtonVariantType) =>
 
     "&:disabled": {
       cursor: "not-allowed",
+    },
+
+    "&:hover": {
+      backgroundColor: `${
+        variant === "primary" ? colors.primary02 : colors.black
+      }`,
+      color: `${variant === "primary" ? colors.white : colors.white}`,
     },
   });
 

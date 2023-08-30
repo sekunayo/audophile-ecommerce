@@ -67,7 +67,7 @@ const homeHeroBoxImage = css({
   justifyContent: "center",
   alignItems: "center",
   width: "100%",
-  height: "100%",
+  height: "auto",
   background:
     'url("../../assets/images/home/desktop/image-hero.jpg"), #141414 0px 0px / 100% 100% no-repeat',
 });
@@ -165,6 +165,10 @@ const homeBigSpeakerTextHeading = css({
 
 const homeBigSpeakerButton = css({
   backgroundColor: colors.black,
+
+  "&:hover": {
+    backgroundColor: colors.dark03,
+  },
 });
 
 const homeBodyText = css({
